@@ -271,7 +271,7 @@ return packer.startup {
       config = function()
         require "interface.hlargs"
       end,
-      after = "catppuccin",
+      after = {"catppuccin", "spacevim"},
       -- hlargs should be loaded after colorscheme
     }
 
@@ -485,6 +485,14 @@ return packer.startup {
         require "interface.stabilize"
       end,
       disable = true,
+    }
+
+    use {
+      "liuchengxu/space-vim-theme",
+      as = "spacevim",
+      config = function()
+        require "interface.colorscheme"
+      end,
     }
 
     use {
