@@ -41,6 +41,7 @@ bufferline.setup {
       return "(" .. count .. ")"
     end,
     -- NOTE: this will be called a lot so don't do any heavy processing here
+    --[[
     custom_filter = function(buf_number, buf_numbers)
       -- Show buffers if they are in the current tabpage
       if vim.tbl_contains(vim.fn.tabpagebuflist(), buf_number) then
@@ -52,6 +53,7 @@ bufferline.setup {
         return true
       end
     end,
+    --]]
     offsets = {
       { filetype = "NvimTree", text = "File Explorer", text_align = "center" },
       { filetype = "Outline", text = "Outline", text_align = "center" },
