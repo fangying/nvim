@@ -10,4 +10,4 @@ vim.keymap.set("n", "<leader>gdh", "<Cmd>DiffviewFileHistory<CR>", { desc = "Ope
 vim.keymap.set("v", "J", ":move '>+1<CR>gv-gv", { desc = "Move Down" })
 vim.keymap.set("v", "K", ":move '<-2<CR>gv-gv", { desc = "Move Up" })
 -- TSBufToggle highlight
-vim.keymap.set("n", "<leader>th", "TSBufToggle highlight<CR>", { desc = "TSBufToggle highlight" })
+vim.keymap.set("n", "<leader>th", "<Cmd>TSBufToggle highlight<CR>", { desc = "TSBufToggle highlight" })
