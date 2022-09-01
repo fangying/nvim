@@ -721,6 +721,10 @@ return packer.startup {
 
     -- Efficiency Improvement {{{
     use {
+        "fangying/mark.vim",
+    }
+
+    use {
       "nvim-telescope/telescope.nvim",
       config = function()
         require "efficiency.telescope"
