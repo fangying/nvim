@@ -133,5 +133,4 @@ if ok then
   vim.g.catppuccin_flavour = "latte"
 end
 
--- vim.cmd "colorscheme space_vim_theme"
-vim.cmd "colorscheme catppuccin"
+vim.cmd "colorscheme spacecamp"
