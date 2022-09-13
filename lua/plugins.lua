@@ -261,15 +261,6 @@ return packer.startup {
     }
 
     use {
-      "m-demare/hlargs.nvim",
-      config = function()
-        require "interface.hlargs"
-      end,
-      after = {"catppuccin"},
-      -- hlargs should be loaded after colorscheme
-    }
-
-    use {
       "zbirenbaum/neodim",
       config = function()
         require "interface.dim"
@@ -491,23 +482,24 @@ return packer.startup {
 
     use {
       "liuchengxu/space-vim-theme",
-      "catppuccin/nvim",
-      "folke/tokyonight.nvim",
-      "navarasu/onedark.nvim",
-      "Mofiqul/vscode.nvim",
+      -- "liuchengxu/space-vim-dark",
+      -- "colepeters/spacemacs-theme.vim",
+      -- "dciccale/vim-space",
+      -- "jaredgorski/spacecamp",
+      -- "folke/tokyonight.nvim",
+      -- "navarasu/onedark.nvim",
+      -- "Mofiqul/vscode.nvim",
       -- "Mofiqul/dracula.nvim",
-      "projekt0n/github-nvim-theme",
-      "tanvirtin/monokai.nvim",
-      -- "ellisonleao/gruvbox.nvim",
-      -- "shaunsingh/solarized.nvim",
-      "shaunsingh/moonlight.nvim",
-      "shaunsingh/nord.nvim",
+      -- "projekt0n/github-nvim-theme",
+      -- "tanvirtin/monokai.nvim",
+      -- "sainnhe/sonokai",
+      -- "shaunsingh/moonlight.nvim",
+      -- "shaunsingh/nord.nvim",
       -- commit = "d83145614e8082b24a001643f1c6c00c0ea9aaef", -- After this commit, nightfox has changed a lot
-      as = "catppuccin",
+      as = "themes",
       config = function()
         require "interface.colorscheme"
       end,
-      run = ":CatppuccinCompile",
       -- requires = { "rktjmp/lush.nvim" }, -- Required by gruvbox
     }
     -- }}}
