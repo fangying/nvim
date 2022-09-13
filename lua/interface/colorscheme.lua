@@ -12,15 +12,6 @@ vim.g.github_sidebars = { "Outline", "packer" }
 
 vim.g.vscode_style = "dark"
 
-local ok, nightfox = pcall(require, "nightfox")
-if ok then
-  nightfox.setup {
-    styles = {
-      comments = "italic",
-    },
-  }
-end
-
 local ok, catppuccin = pcall(require, "catppuccin")
 if ok then
   catppuccin.setup {
