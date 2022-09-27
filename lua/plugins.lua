@@ -261,15 +261,6 @@ return packer.startup {
     }
 
     use {
-      "m-demare/hlargs.nvim",
-      config = function()
-        require "interface.hlargs"
-      end,
-      after = "catppuccin",
-      -- hlargs should be loaded after colorscheme
-    }
-
-    use {
       "zbirenbaum/neodim",
       config = function()
         require "interface.dim"
@@ -494,6 +485,9 @@ return packer.startup {
       "liuchengxu/space-vim-theme",
       "navarasu/onedark.nvim",
       "flazz/vim-colorschemes",
+    }
+
+    use {
       "catppuccin/nvim",
       -- "folke/tokyonight.nvim",
       -- "Mofiqul/vscode.nvim",
