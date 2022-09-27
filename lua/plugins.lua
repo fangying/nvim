@@ -521,7 +521,6 @@ return packer.startup {
         require "tool.tree"
       end,
       requires = { "kyazdani42/nvim-web-devicons" },
-      disable = true,
     }
 
     use {
@@ -545,6 +544,7 @@ return packer.startup {
         "MunifTanjim/nui.nvim",
         "s1n7ax/nvim-window-picker",
       },
+      disable = true,
     }
 
     use {
@@ -712,6 +712,14 @@ return packer.startup {
       "lalitmee/browse.nvim",
       requires = { "nvim-telescope/telescope.nvim" },
       disable = true,
+    }
+
+    use {
+      "rest-nvim/rest.nvim",
+      config = function()
+        require "tool.rest"
+      end,
+      ft = { "http" },
     }
     -- }}}
 

@@ -51,7 +51,48 @@ if ok then
       operators = {},
     },
     integrations = {
+      aerial = true,
+      barbar = false,
+      beacon = false,
+      cmp = true,
+      coc_nvim = false,
+      dashboard = false,
+      fern = false,
+      fidget = true,
+      gitgutter = false,
+      gitsigns = true,
+      hop = true,
+      illuminate = true,
+      leap = false,
+      lightspeed = false,
+      lsp_saga = false,
+      lsp_trouble = false,
+      markdown = true,
+      mini = false,
+      neogit = true,
+      notify = true,
+      nvimtree = true,
+      overseer = false,
+      pounce = false,
+      symbols_outline = false,
+      telekasten = false,
+      telescope = true,
       treesitter = true,
+      treesitter_context = true,
+      ts_rainbow = true,
+      vim_sneak = false,
+      vimwiki = false,
+      which_key = true,
+
+      -- Special integrations, see https://github.com/catppuccin/nvim#special-integrations
+      dap = {
+        enabled = true,
+        enable_ui = true,
+      },
+      indent_blankline = {
+        enabled = true,
+        colored_indent_levels = false,
+      },
       native_lsp = {
         enabled = true,
         virtual_text = {
@@ -67,52 +108,15 @@ if ok then
           information = { "underline" },
         },
       },
-      coc_nvim = false,
-      lsp_trouble = false,
-      cmp = true,
-      lsp_saga = false,
-      gitgutter = false,
-      gitsigns = true,
-      telescope = true,
-      nvimtree = false,
-      dap = {
+      navic = {
         enabled = true,
-        enable_ui = true,
+        custom_bg = "NONE",
       },
       neotree = {
         enabled = false,
         show_root = true,
         transparent_panel = false,
       },
-      which_key = true,
-      indent_blankline = {
-        enabled = true,
-        colored_indent_levels = false,
-      },
-      dashboard = false,
-      neogit = true,
-      vim_sneak = false,
-      fern = false,
-      barbar = false,
-      markdown = true,
-      lightspeed = false,
-      leap = false,
-      ts_rainbow = true,
-      hop = true,
-      notify = true,
-      telekasten = false,
-      symbols_outline = false,
-      mini = false,
-      aerial = false,
-      vimwiki = true,
-      beacon = true,
-      navic = {
-        enabled = true,
-        custom_bg = "NONE",
-      },
-      overseer = false,
-      fidget = true,
-      treesitter_context = true,
     },
     color_overrides = {},
     highlight_overrides = {},
@@ -130,7 +134,15 @@ if ok then
     command = "source <afile> | CatppuccinCompile",
   })
 
-  vim.g.catppuccin_flavour = "latte"
+  vim.g.catppuccin_flavour = "mocha"
 end
 
-vim.cmd "colorscheme spacecamp"
+vim.cmd "colorscheme catppuccin"
+
+vim.cmd [[
+hi link GitSignsChangeLn DiffText
+hi link GitSignsAddInline GitSignsAddLn
+hi link GitSignsDeleteInline GitSignsDeleteLn
+hi link GitSignsChangeInline GitSignsChangeLn
+hi link GitSignsDeleteLn DiffDelete
+]]
